@@ -1,0 +1,260 @@
+/* this is a comment */
+* {
+    font-family: "Anton", sans-serif;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    place-items: center;
+}
+
+.navigation {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: brown;
+}
+
+.logo img {
+    width: 300px;
+    height: 50px;
+}
+
+.options {
+    margin-right: 20px;
+}
+
+.options ul{
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    list-style-type: none;
+}
+
+.options ul li {
+    background-color: rgb(230, 55, 55);
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    padding: 5px;
+    border-radius: 15px;
+    font-weight: bold;
+}
+
+.options ul li a {
+    text-decoration: none;
+    color: black;
+}
+
+.content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    gap: 0px;
+    background:#81ecec;
+    background:brown;
+    background-size: 100% 100%;
+}
+
+.figure {
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-areas: "img";
+    width: 100%;
+    height: auto;
+    place-items: center;
+}
+
+.figure img {
+    width: 100%;
+    height: 100vh;
+    background-position: 100% 100%;
+    grid-area: img;
+    object-fit: cover;
+}
+
+ .figure::after {
+    content: "Become a Hero in Titanfall";
+    width: 100%;
+    font-size: 100px;
+    text-transform: uppercase;
+    text-align: center;
+    height: 100vh;
+    grid-area: img;
+    background-image: url('https://www.gamespot.com/a/uploads/scale_super/536/5360430/3076983-screen%20shot%202016-06-12%20at%2010.39.19%20am.jpg');
+    background-size: cover;
+    font-weight: bold;
+    background-size: 100% 100%;  
+    display: grid;
+    place-items: center;
+    opacity: 0;
+    transition: all .6s;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+ }
+ 
+
+ .figure:hover::after {
+    opacity:1;
+ }
+
+ .info {
+    width: 100%;
+    height: 600px;
+    display: grid;
+    place-items: center;
+    text-align: center;
+    background: brown;
+    font-weight: bold;
+    color: white;
+    font-size: 25px;
+ }
+
+ .story {
+    width: 100%;
+    height:600px;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-weight: bold;
+    color: black;
+    font-size: 30px;
+    background: url("https://media.contentapi.ea.com/content/dam/eacom/titanfall/titanfall-2/images/News/tf2-ultimate-keyart-horizontal-rgb.jpg.adapt.crop16x9.575p.jpg");
+    background-size: 100% 100%;
+    opacity: 0;
+    transform: scale(0.9);
+    transition: .7s ease-in-out all;
+ }
+
+ .story div {
+    background: white transparent;
+    backdrop-filter: blur(5px);
+    width: 100%;
+ }
+
+ .buying {
+    width: 100%;
+    height: 400px;
+    display: grid;
+    place-items: center;
+    text-align: center;
+    background: url("https://cdn.mos.cms.futurecdn.net/KRDEEJRpfcfY9SvWrAMR6m.png");
+    background-size: 100%   100%;
+    opacity: 0;
+    transform: scale(0.9);
+    transition: .7s ease-in-out all;
+ }
+
+ .content section.visible {
+    opacity: 1;
+    transform: scale(1);
+ }
+
+ .buying div {
+    background: white transparent;
+    backdrop-filter: blur(5px);
+    width: 100%;
+ }
+
+ .buying h2 {
+    font-size: 30px;
+ }
+
+ .platforms {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    place-items: center;
+    grid-template-columns: repeat(3,auto);
+ }
+
+ .steam img {
+    width: 100px;
+    height: 100px;
+ }
+
+ .xbox-one img {
+    width: 150px;
+    height: 50px;
+ }
+
+ .playstation img {
+    width: 150px;
+    height: 50px;
+ }
+
+ @media (max-width: 640px) {
+
+   .options {
+      display: none;
+   }
+
+   .figure::after {
+      font-size: 50px;
+   }
+
+   .navigation {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+   }
+
+   img {
+      object-fit: cover;
+   }
+
+   section {
+      overflow: hidden;
+   }
+
+   section div h2 {
+      font-size: 20px;
+   }
+
+   section div  p {
+      font-size: 20px;
+   }
+
+   .buying {
+      height: auto;
+   }
+
+   .platforms {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 30px;
+      width: 100%;
+      height: auto;
+   }
+
+
+   * {
+      font-weight: normal;
+   }
+
+   .figure > img {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+   }
+ }
+
